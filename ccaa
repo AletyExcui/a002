@@ -1,5 +1,5 @@
 #!/bin/bash
-#####		CCAA管理脚本			#####
+#####		CCAA管理脚本		    	#####
 #####		Author:xiaoz.me			#####
 #####		Update:2020-02-27		#####
 
@@ -14,7 +14,7 @@ filebrowser_pid=$(pgrep 'filebrowser')
 #如果变量不存在
 if [ ! $1 ]
 	then
-	bash <(curl -Lsk https://raw.githubusercontent.com/helloxz/ccaa/master/ccaa.sh)
+	bash <(curl -Lsk https://raw.githubusercontent.com/AletyExcui/ccaa/master/ccaa.sh)
 	exit
 fi
 
