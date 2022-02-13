@@ -40,9 +40,9 @@ else
 	fi
 fi
 
-aria2_url='https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-64bit-build1.tar.bz2'
-filebrowser_url='https://github.com/filebrowser/filebrowser/releases/download/v2.0.16/linux-amd64-filebrowser.tar.gz'
-master_url='https://github.com/crazypeace/ccaa/archive/master.zip'
+aria2_url='https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-64bit-build1.tar.bz2'
+filebrowser_url='https://github.com/filebrowser/filebrowser/releases/download/v2.20.1/linux-amd64-filebrowser.tar.gz'
+master_url='https://github.com/AletyExcui/ccaa/archive/refs/heads/master.zip'
 
 #安装前的检查
 function check(){
@@ -84,8 +84,8 @@ function install_aria2(){
 	#yum -y update
 	#安装aria2静态编译版本，来源于https://github.com/q3aql/aria2-static-builds/
 	wget -c ${aria2_url}
-	tar jxvf aria2-1.35.0-linux-gnu-64bit-build1.tar.bz2
-	cd aria2-1.35.0-linux-gnu-64bit-build1
+	tar jxvf aria2-1.36.0-linux-gnu-64bit-build1.tar.bz2
+	cd aria2-1.36.0-linux-gnu-64bit-build1
 	make install
 	cd
 }
