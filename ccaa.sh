@@ -223,7 +223,7 @@ function setting(){
 	bash /etc/ccaa/upbt.sh
 	
 	#安装ccaa_web
-	cp ccaa-master/ccaa_web /usr/sbin/
+	cp a002-master/ccaa_web /usr/sbin/
 	chmod +x /usr/sbin/ccaa_web
 
 	#启动服务
