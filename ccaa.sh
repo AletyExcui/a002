@@ -91,15 +91,15 @@ function install_aria2(){
 }
 
 #安装File Browser文件管理器
-function install_file_browser(){
-	cd ./ccaa_tmp
+#function install_file_browser(){
+	#cd ./ccaa_tmp
 	#下载File Browser
-	wget ${filebrowser_url}
+	#wget ${filebrowser_url}
 	#解压
-	tar -zxvf linux-amd64-filebrowser.tar.gz
+	#tar -zxvf linux-amd64-filebrowser.tar.gz
 	#移动位置
-	mv filebrowser /usr/sbin
-	cd
+	#mv filebrowser /usr/sbin
+	#cd
 }
 
 #处理配置文件
@@ -215,7 +215,7 @@ function setting(){
 	sed -i "s%dir=%dir=${downpath}%g" /etc/ccaa/aria2.conf
 	sed -i "s/rpc-secret=/rpc-secret=${secret}/g" /etc/ccaa/aria2.conf
 	#替换filebrowser读取路径
-	sed -i "s%ccaaDown%${downpath}%g" /etc/ccaa/config.json
+	#sed -i "s%ccaaDown%${downpath}%g" /etc/ccaa/config.json
 	#替换AriaNg服务器链接
 	sed -i "s/server_ip/${osip}/g" /etc/ccaa/AriaNg/index.html
 	
@@ -231,7 +231,7 @@ function setting(){
 	#nohup caddy -conf="/etc/ccaa/caddy.conf" > /etc/ccaa/caddy.log 2>&1 &
 	nohup sudo -u ccaa /usr/sbin/ccaa_web > /var/log/ccaa_web.log 2>&1 &
 	#运行filebrowser
-	nohup sudo -u ccaa filebrowser -c /etc/ccaa/config.json > /var/log/fbrun.log 2>&1 &
+	#nohup sudo -u ccaa filebrowser -c /etc/ccaa/config.json > /var/log/fbrun.log 2>&1 &
 
 	#重置权限
 	chown -R ccaa:ccaa /etc/ccaa/
