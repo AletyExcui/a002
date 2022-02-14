@@ -14,7 +14,7 @@ ccaa_web_pid=$(pgrep 'ccaa_web')
 #如果变量不存在
 if [ ! $1 ]
 	then
-	bash <(curl -Lsk https://raw.githubusercontent.com/AletyExcui/a002/master/ccaa.sh)
+	bash <(curl -Lsk https://raw.githubusercontent.com/AletyExcui/ccaa/master/ccaa.sh)
 	exit
 fi
 
